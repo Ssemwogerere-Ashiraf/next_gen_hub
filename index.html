@@ -3,22 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
-  <title>Welcome to Ashley's Page</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+ <title>Welcome to Edward's Page</title>
   <style>
     /* General Styles */
     body {
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f9;
-      color: #333;
+      color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       box-sizing: border-box;
+      background: black;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Glittering Stars Background */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(white, transparent);
+      background-size: 3px 3px;
+      background-repeat: repeat;
+      animation: glitter 2s infinite;
+      z-index: 0; /* Send the stars behind everything else */
+      pointer-events: none; /* Allow interactions with elements above it */
+    }
+
+    @keyframes glitter {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
     }
 
     /* Container */
@@ -27,15 +53,17 @@
       max-width: 600px;
       padding: 20px;
       border-radius: 8px;
-      background-color: #ffffff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background-color: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+      z-index: 1; /* Ensure the container is above the stars */
+      position: relative;
     }
 
     /* Heading */
     h1 {
       font-size: 2.5rem;
       margin-bottom: 10px;
-      color: #0056b3;
+      color: #ffd700;
     }
 
     /* Paragraph */
@@ -60,11 +88,7 @@
     /* Button Hover */
     button:hover {
       background-color: #003d80;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
-    
-    footer{
-    	align-items: center;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
     }
 
     /* Responsive Design */
@@ -96,12 +120,10 @@
                 <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
             </ul>
         </div>
-    </nav>
-    
-    	
+    </nav>	
   <div class="container">
     <h1>Welcome to Ashley's Page</h1>
-    <p>Hi! My name is Ashley. I enjoy coding, reading books, and exploring new technologies. My goal is to become a proficient full-stack developer!</p>
+    <p>Hi! My name is Ashiraf. I enjoy coding, reading books, and exploring new technologies. My goal is to become a proficient full-stack developer!</p>
     <button onclick="showGreeting()">Click Me!</button>
   </div>
   <script>
