@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
- <title>Welcome to Edward's Page</title>
+  <title>Welcome to Ashley's Page</title>
   <style>
     /* General Styles */
     body {
@@ -16,34 +16,80 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      box-sizing: border-box;
-      background: black;
       overflow: hidden;
+      background: #87ceeb; /* Sky blue background */
       position: relative;
     }
 
-    /* Glittering Stars Background */
-    body::before {
-      content: "";
+    /* Animated Butterflies */
+    .butterfly {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(white, transparent);
-      background-size: 3px 3px;
-      background-repeat: repeat;
-      animation: glitter 2s infinite;
-      z-index: 0; /* Send the stars behind everything else */
-      pointer-events: none; /* Allow interactions with elements above it */
+      width: 20px;
+      height: 20px;
+      background-color: #ff69b4; /* Pink butterfly body */
+      border-radius: 50%;
+      animation: fly 10s linear infinite;
     }
 
-    @keyframes glitter {
-      0%, 100% {
-        opacity: 1;
+    /* Butterfly wings */
+    .butterfly::before, .butterfly::after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: #ff69b4;
+      border-radius: 50%;
+    }
+
+    .butterfly::before {
+      top: -15px;
+      left: -20px;
+    }
+
+    .butterfly::after {
+      top: -15px;
+      right: -20px;
+    }
+
+    .butterfly:nth-child(1) {
+      left: 10%;
+      animation-duration: 8s;
+      animation-delay: 0s;
+    }
+
+    .butterfly:nth-child(2) {
+      left: 25%;
+      animation-duration: 12s;
+      animation-delay: 2s;
+    }
+
+    .butterfly:nth-child(3) {
+      left: 50%;
+      animation-duration: 10s;
+      animation-delay: 4s;
+    }
+
+    .butterfly:nth-child(4) {
+      left: 70%;
+      animation-duration: 15s;
+      animation-delay: 6s;
+    }
+
+    .butterfly:nth-child(5) {
+      left: 90%;
+      animation-duration: 9s;
+      animation-delay: 1s;
+    }
+
+    @keyframes fly {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
       }
       50% {
-        opacity: 0.5;
+        transform: translateY(50vh) rotate(45deg);
+      }
+      100% {
+        transform: translateY(-10vh) rotate(0deg);
       }
     }
 
@@ -53,10 +99,9 @@
       max-width: 600px;
       padding: 20px;
       border-radius: 8px;
-      background-color: rgba(0, 0, 0, 0.8);
-      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-      z-index: 1; /* Ensure the container is above the stars */
-      position: relative;
+      background-color: rgba(0, 0, 0, 0.7);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1;
     }
 
     /* Heading */
@@ -107,7 +152,7 @@
   </style>
 </head>
 <body>
-	<header>
+		<header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Ashley's page</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
@@ -121,18 +166,27 @@
             </ul>
         </div>
     </nav>	
+  <!-- Animated Butterflies -->
+  <div class="butterfly"></div>
+  <div class="butterfly"></div>
+  <div class="butterfly"></div>
+  <div class="butterfly"></div>
+  <div class="butterfly"></div>
+
+  <!-- Content Container -->
   <div class="container">
     <h1>Welcome to Ashley's Page</h1>
     <p>Hi! My name is Ashiraf. I enjoy coding, reading books, and exploring new technologies. My goal is to become a proficient full-stack developer!</p>
     <button onclick="showGreeting()">Click Me!</button>
   </div>
+
   <script>
     function showGreeting() {
       alert("Hello, welcome to my page!");
     }
   </script>
   
-  <footer style = "background-color: black;">
+    <footer style = "background-color: black;">
  <p style = "text-align: center;"> <b>contact me on:</b> &phone; 0701422100 &phone;</p>
  <p style = "text-align: center;">All rights reserved</p>
   </footer>
