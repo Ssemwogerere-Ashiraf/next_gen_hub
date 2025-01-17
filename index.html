@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to Edward's Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <title>Welcome to Ashley's Page</title>
   <style>
     /* General Styles */
     body {
@@ -60,6 +62,10 @@
       background-color: #003d80;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
+    
+    footer{
+    	align-items: center;
+    }
 
     /* Responsive Design */
     @media (max-width: 600px) {
@@ -77,9 +83,25 @@
   </style>
 </head>
 <body>
+	<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Ashley's page</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    	
   <div class="container">
     <h1>Welcome to Ashley's Page</h1>
-    <p>Hi! My name is Ashiraf. I enjoy coding, reading books, and exploring new technologies. My goal is to become a proficient full-stack developer!</p>
+    <p>Hi! My name is Ashley. I enjoy coding, reading books, and exploring new technologies. My goal is to become a proficient full-stack developer!</p>
     <button onclick="showGreeting()">Click Me!</button>
   </div>
   <script>
@@ -87,5 +109,14 @@
       alert("Hello, welcome to my page!");
     }
   </script>
+  
+  <footer style = "background-color: black;">
+ <p style = "text-align: center;"> <b>contact me on:</b> &phone; 0701422100 &phone;</p>
+ <p style = "text-align: center;">All rights reserved</p>
+  </footer>
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script
 </body>
 </html>
